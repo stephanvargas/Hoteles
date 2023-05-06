@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación del hotel</title>
+  <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+      }
+      header {
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      h1 {
+        margin: 0;
+        font-size: 36px;
+        color: #333;
+      }
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+      p {
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      label {
+        display: inline-block;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      select {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+      }
+      button[type="submit"] {
+        display: inline-block;
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+      }
+    </style>
+</head>
+<body>
+<header>
+  <h1>Evaluación del hotel</h1> <a href="Boton.html" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> inicio</a>
+</header>
+<main>
+  <p>Por favor, califique la experiencia en el hotel:</p>
+  <form>
+    <label for="hotel">Calificación:</label>
+    <select id="hotel" name="hotel" required>
+      <option value="">Seleccione una opción</option>
+      <option value="excelente">Excelente</option>
+      <option value="bueno">Bueno</option>
+      <option value="regular">Regular</option>
+    </select>
+    <br>
+    <label for="comentarios">Comentarios:</label>
+    <input type="text" id="comentarios" name="comentarios" required>
+    <br>
+    <button type="submit">Enviar</button>
+  </form>
+</main>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vuelva pronto</title>
+  <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+      }
+      header {
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      h1 {
+        margin: 0;
+        font-size: 36px;
+        color: #333;
+      }
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+      p {
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      button[type="submit"] {
+        display: inline-block;
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+      }
+    </style>
+</head>
+<body>
+<header>
+  <h1>Vuelva pronto</h1>
+</header>
+<main>
+  <p>Gracias por visitarnos. ¡Esperamos verlo de nuevo!</p>
+  <button onclick="window.history.back()">Volver atrás</button>
+</main>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactos</title>
+  <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+      }
+      header {
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      h1 {
+        margin: 0;
+        font-size: 36px;
+        color: #333;
+      }
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+      p {
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      label {
+        display: inline-block;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      input[type="text"], textarea {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      button[type="submit"] {
+        display: inline-block;
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+      }
+    </style>
+</head>
+<body>
+<header>
+  <h1>Contactos</h1>
+</header>
+<main>
+  <p>Puedes ponerte en contacto con nosotros por teléfono, correo electrónico o utilizando el siguiente formulario:</p>
+  <ul>
+  </ul>
+  <form>
+    <label for=>Telefono: 3175532871 - 3182819729</label>
+    <br>
+    <label for=>Correo electrónico: stephanvargas4@gmail.com </label>
+    <br>
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" required></textarea>
+    <br>
+    <button type="submit">Enviar</button>
+
+  </form>
+</main>
+</body>
+</html>

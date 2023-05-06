@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de número de habitación</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: url("https://images.unsplash.com/photo-1506810487-bb82b58be0a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+        background-size: cover;
+        background-position: center;
+      }
+      header {
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      h1 {
+        margin: 0;
+        font-size: 36px;
+        color: #333;
+      }
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+      p {
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      label {
+        display: inline-block;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      input[type="text"] {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+      }
+      button[type="submit"] {
+        display: inline-block;
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+      }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Ingrese número de habitación</h1>
+</header>
+<main>
+    <p>Por favor, ingrese el número de su habitación a continuación:</p>
+    <form>
+        <label for="habitacion">Número de habitaciones:</label>
+        <input type="text" id="habitacion" name="habitacion" required>
+        <br>
+        <button type="submit">Ingresar</button>
+    </form>
+</main>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fecha de llegada</title>
+</head>
+<body>
+<h1>Fecha de llegada</h1>
+<form>
+    <label for="fecha-llegada">Fecha de llegada:</label>
+    <input type="date" id="fecha-llegada" name="fecha-llegada" required>
+    <br>
+    <br>
+    <button type="submit">Enviar</button>
+</form>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fecha de salida</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      margin-top: 0;
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    button[type="submit"] {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<h1>Fecha de salida</h1>
+<form>
+    <label for="fecha-llegada">Fecha de salida:</label>
+    <input type="date" name="fecha-llegada" required>
+    <br>
+    <br>
+    <button type="submit">Enviar</button>
+
+    <a href="Contactos.html" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Contactos </a>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script>
+    $(function() {
+      $("#fecha_salida").datepicker({dateFormat: 'yy-mm-dd'});
+    });
+  </script>
+</body>
+</html>
+
+
+
