@@ -79,7 +79,7 @@
 </heade>
 <main>
   <p>Disfrute de nuestra habitación con jacuzzi que cuenta con: cama king, TV65", mini bar, sala de star, baño de lujo y con una hermosa vista que puede apreciar desde su balcón. Por favor, complete el siguiente formulario para hacer su reserva:</p>
-  <form th:action="@{/save}" th:object="${persona}" method="POST">
+  <form th:action="@{/save1}" th:object="${persona}" method="POST">
         <h3>
           Regristro:
         </h3>
@@ -100,8 +100,18 @@
       <input th:field="*{num_doc}" type="text" class="form-control">
     </div>
     <div class="form-group">
-      <label>Número de habitaciones:</label>
-      <input type="text" id="habitacion" name="habitacion" required>
+      <label>habitacion"</label>
+      <input th:field="*{num_abi}" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Fecha De llegada"</label>
+      <input th:field="*{llegada}" type="date" class="form-control" >
+    </div>
+    <div class="form-group">
+      <label>Fecha De Salida"</label>
+      <input th:field="*{salida}" type="date" class="form-control " >
+    </div>
+
 
     </div><div class="card-footer">
     <input type="submit" value="Siguiente" class="btn btn-success">

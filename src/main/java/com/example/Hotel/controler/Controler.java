@@ -32,16 +32,26 @@ public class Controler {
         return "Boton";
     }
 
-    @GetMapping("/new")
-    public String agregar(Model model){
+
+    @GetMapping("/jacuzzi")
+    public String agregar1(Model model){
         model.addAttribute("persona", new Persona());
         return "Habitaciones con Jacuzzi";
     }
+    @GetMapping("/estelar")
+    public String agregar2(Model model){
+        model.addAttribute("persona", new Persona());
+        return "Habitación estelar";
+    }
 
-    @PostMapping("/save")
-    public String save(@Validated Persona p){
+    @PostMapping("/save1")
+    public String save1(@Validated Persona p){
         service.save(p);
-        return "redirect:/listar";
+        return "redirect:";
+    } @PostMapping("/save2")
+    public String save2(@Validated Persona p){
+        service.save(p);
+        return "redirect:";
     }
 
     @GetMapping("/editar/{id}")
