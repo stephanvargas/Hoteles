@@ -27,13 +27,13 @@ public class Controler {
     public String listar(Model model){
         List<Registro>registros= service.listar();
         model.addAttribute("registro",registros);
-        return "reservas";
+        return "index";
     }
 
     @GetMapping("/new")
     public String agregar(Model model){
         model.addAttribute("registro", new Registro());
-        return "Numero de habitaciones";
+        return "prueba";
     }
 
     @PostMapping("/save")
