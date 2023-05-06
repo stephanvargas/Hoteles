@@ -2,7 +2,7 @@ package com.example.CrudSpringBoot.service;
 
 import com.example.CrudSpringBoot.interfaceService.IPersonaService;
 import com.example.CrudSpringBoot.interfaces.IPersona;
-import com.example.CrudSpringBoot.modelo.Persona;
+import com.example.CrudSpringBoot.modelo.Registro;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,24 +13,24 @@ import java.util.Optional;
 public class PersonaService implements IPersonaService {
 
     @Autowired
-    private IPersona data;
+    private IPersona datos;
 
     @Override
-    public List<Persona> listar() {
-        return (List<Persona>) data.findAll();
+    public List<Registro> listar() {
+        return (List<Registro>) datos.findAll();
     }
 
     @Override
-    public Optional<Persona> listarId(int id) {
+    public Optional<Registro> listarId(int id) {
 
-        return data.findById(id);
+        return datos.findById(id);
     }
 
     @Override
-    public int save(Persona p) {
+    public int save(Registro a) {
         int res = 0;
-        Persona persona = data.save(p);
-        if(!persona.equals(null)){
+        Registro registro = datos.save(a);
+        if(!registro.equals(null)){
             res = 1;
         }
         return res;
@@ -38,6 +38,6 @@ public class PersonaService implements IPersonaService {
 
     @Override
     public void delete(int id) {
-            data.deleteById(id);
+            datos.deleteById(id);
     }
 }

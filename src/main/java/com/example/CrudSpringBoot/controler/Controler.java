@@ -3,7 +3,7 @@ package com.example.CrudSpringBoot.controler;
 
 
 import com.example.CrudSpringBoot.interfaceService.IPersonaService;
-import com.example.CrudSpringBoot.modelo.Persona;
+import com.example.CrudSpringBoot.modelo.Registro;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,27 +27,27 @@ public class Controler {
 
     @GetMapping("/listar")
     public String listar(Model model){
-        List<Persona>personas= service.listar();
-        model.addAttribute("personas", personas);
+        List<Registro>registros= service.listar();
+        model.addAttribute("registro",registros);
         return "Boton";
     }
 
     @GetMapping("/new")
     public String agregar(Model model){
-        model.addAttribute("persona", new Persona());
+        model.addAttribute("persona", new Registro());
         return "Numero de habitaciones";
     }
 
     @PostMapping("/save")
-    public String save(@Validated Persona p){
-        service.save(p);
+    public String save(@Validated Registro a){
+        service.save(a);
         return "redirect:/listar";
     }
 
     @GetMapping("/editar/{id}")
     public String editar(@PathVariable int id, Model model){
-        Optional<Persona> persona = service.listarId(id);
-        model.addAttribute("persona", persona);
+        Optional<Registro> registro = service.listarId(id);
+        model.addAttribute("registro", registro);
         return "form";
     }
 
