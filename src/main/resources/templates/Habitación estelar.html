@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:background-color="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="icon" href="hotel.png">
   <title>Habitación estelar</title>
   <style>
 body {
 font-family: Papyrus, sans-serif;
 background-image: url(habitacion.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
-
 h1 {
 margin: 0;
 font-size: 36px;
-color: #333333;
+color: brown;
 }
 main {
 max-width: 800px;
@@ -72,20 +76,32 @@ height: 50px;
 </header>
 <main>
   <p>Disfrute de nuestra habitación estelar y sus comodidades que son cama doble, wifi,TV65", mini bar, baño de lujo, y con una hermosa vista que puede ver desde su balcón. Por favor, complete el siguiente formulario para hacer su reserva:</p>
-  <form>
-    <label for="nombre del huesped">Nombre del huesped:</label>
-    <input type="text" id="nombre del huesped" name="nombre del huesped" required>
-    <br>
-    <label for=>Correo electrónico:</label>
-    <input type="text" id="correo del huesped" name="correo del huesped" required>
-    <br>
-    <label for=>Teléfono del huesped:</label>
-    <input type="text" id="teléfono del huesped" name="teléfono del huesped" required>
-    <br>
-    <br>
-    <label for="documento">Documento:</label>
-    <input type="text" id="documento" name="documento"required>
-    <button type="submit">Ingresar</button>
+  <form th:action="@{/save}" th:object="${persona}" method="POST" >
+
+
+      </div>
+          <label>Nombre Del Huesped:</label>
+          <input th:field="*{name}" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Correo electrónico:</label>
+          <input th:field="*{telefono}" type="text" class="form-control">
+        </div><div class="form-group">
+
+        <label>Numero de telefomo</label>
+        <input th:field="*{getNum_doc()}" type="text" class="form-control">
+      </div>
+        <div class="form-group">
+          <label>Numero de documento</label>
+          <input th:field="*{getNum_doc()}" type="text" class="form-control">
+        </div>
+      </div>
+      <div class="card-footer">
+        <input type="submit" value="Siguiente" class="btn btn-success">
+        <a th:href="@{/listar/}" class="btn btn-warning">Atras</a>
+      </div>
+    </div>
+
 
   </form><a href="Contactos.html" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Contactos </a>
 </main>
