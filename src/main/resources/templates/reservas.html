@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Odontosalud-P-List</title>
+    <link rel="icon" href="icono.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+<!--Barra de navegación-->
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/inicio">
+            <!--Logo-->
+            <img src="logotipo.png" alt="Logo" width="32" height="32" class="d-inline-block align-text-top">
+            Odontosalud-P
+        </a>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/añadir">Añadir paciente</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--Tabla-->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+            <h2>Listado pacientes</h2>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+            <h2>Gestión-P</h2>
+            <table class="table table-ligth table-striped-columns">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">NOMBRE</th>
+                        <th class="center">APELLIDO</th>
+                        <th class="center">CEDULA</th>
+                        <th class="center">EDAD</th>
+                        <th class="center">GENERO</th>
+                        <th class="center"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr th:each="persona:${personas}">
+                    <td th:text="${persona.id}"></td>
+                    <td th:text="${persona.nombre}"></td>
+                    <td th:text="${persona.apellido}"></td>
+                    <td th:text="${persona.cedula}"></td>
+                    <td th:text="${persona.edad}"></td>
+                    <td th:text="${persona.genero}"></td>
+                    <td>
+                        <a th:href="@{/editar/}+${persona.id}" class="btn btn-warning">Editar</a>
+                        <a th:href="@{/eliminar/}+${persona.id}"  class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <form>
+                <div class="d-grid gap-2">
+                    <a th:href="@{/añadir}" class="btn btn-success">Nuevo</a>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>

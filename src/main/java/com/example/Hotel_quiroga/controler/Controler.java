@@ -1,9 +1,7 @@
-package com.example.CrudSpringBoot.controler;
+package com.example.Hotel_quiroga.controler;
 
-
-
-import com.example.CrudSpringBoot.interfaceService.IPersonaService;
-import com.example.CrudSpringBoot.modelo.Registro;
+import com.example.Hotel_quiroga.modelo.Registro;
+import com.example.Hotel_quiroga.interfaceService.ISregistro;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,33 +20,33 @@ public class Controler {
 
 
     @Autowired
-    private IPersonaService service;
+    private ISregistro service;
 
 
     @GetMapping("/listar")
     public String listar(Model model){
         List<Registro>registros= service.listar();
         model.addAttribute("registro",registros);
-        return "Boton";
+        return "reservas";
     }
 
     @GetMapping("/new")
     public String agregar(Model model){
-        model.addAttribute("persona", new Registro());
+        model.addAttribute("registro", new Registro());
         return "Numero de habitaciones";
     }
 
     @PostMapping("/save")
-    public String save(@Validated Registro a){
-        service.save(a);
+    public String save(@Validated Registro p){
+        service.save(p);
         return "redirect:/listar";
     }
 
-    @GetMapping("/editar/{id}")
+    @GetMapping("/editaryacusi/{id}")
     public String editar(@PathVariable int id, Model model){
         Optional<Registro> registro = service.listarId(id);
         model.addAttribute("registro", registro);
-        return "form";
+        return "Habitaciones con Jacuzzi ";
     }
 
     @GetMapping("/eliminar/{id}")

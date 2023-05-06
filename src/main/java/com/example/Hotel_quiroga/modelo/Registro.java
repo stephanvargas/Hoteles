@@ -1,4 +1,4 @@
-package com.example.CrudSpringBoot.modelo;
+package com.example.Hotel_quiroga.modelo;
 
 
 import javax.persistence.*;
