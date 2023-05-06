@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contactos</title>
+  <title>Evaluación del hotel</title>
   <style>
       body {
         font-family: Arial, sans-serif;
@@ -36,14 +36,12 @@
         font-weight: bold;
         margin-bottom: 10px;
       }
-      input[type="text"], textarea {
+      select {
         padding: 10px;
         font-size: 16px;
         border-radius: 5px;
         border: 1px solid #ccc;
         margin-bottom: 20px;
-        width: 100%;
-        box-sizing: border-box;
       }
       button[type="submit"] {
         display: inline-block;
@@ -60,22 +58,23 @@
 </head>
 <body>
 <header>
-  <h1>Contactos</h1>
+  <h1>Evaluación del hotel</h1> <a href="Boton.html" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> inicio</a>
 </header>
 <main>
-  <p>Puedes ponerte en contacto con nosotros por teléfono, correo electrónico o utilizando el siguiente formulario:</p>
-  <ul>
-  </ul>
+  <p>Por favor, califique la experiencia en el hotel:</p>
   <form>
-    <label for=>Telefono: 3175532871 - 3182819729</label>
+    <label for="hotel">Calificación:</label>
+    <select id="hotel" name="hotel" required>
+      <option value="">Seleccione una opción</option>
+      <option value="excelente">Excelente</option>
+      <option value="bueno">Bueno</option>
+      <option value="regular">Regular</option>
+    </select>
     <br>
-    <label for=>Correo electrónico: stephanvargas4@gmail.com </label>
-    <br>
-    <label for="mensaje">Mensaje:</label>
-    <textarea id="mensaje" name="mensaje" required></textarea>
+    <label for="comentarios">Comentarios:</label>
+    <input type="text" id="comentarios" name="comentarios" required>
     <br>
     <button type="submit">Enviar</button>
-
   </form>
 </main>
 </body>

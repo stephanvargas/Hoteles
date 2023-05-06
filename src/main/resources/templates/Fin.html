@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contactos</title>
+  <title>Vuelva pronto</title>
   <style>
       body {
         font-family: Arial, sans-serif;
@@ -31,20 +31,6 @@
         line-height: 1.5;
         margin-bottom: 20px;
       }
-      label {
-        display: inline-block;
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
-      input[type="text"], textarea {
-        padding: 10px;
-        font-size: 16px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        margin-bottom: 20px;
-        width: 100%;
-        box-sizing: border-box;
-      }
       button[type="submit"] {
         display: inline-block;
         background-color: #4CAF50;
@@ -60,23 +46,11 @@
 </head>
 <body>
 <header>
-  <h1>Contactos</h1>
+  <h1>Vuelva pronto</h1>
 </header>
 <main>
-  <p>Puedes ponerte en contacto con nosotros por teléfono, correo electrónico o utilizando el siguiente formulario:</p>
-  <ul>
-  </ul>
-  <form>
-    <label for=>Telefono: 3175532871 - 3182819729</label>
-    <br>
-    <label for=>Correo electrónico: stephanvargas4@gmail.com </label>
-    <br>
-    <label for="mensaje">Mensaje:</label>
-    <textarea id="mensaje" name="mensaje" required></textarea>
-    <br>
-    <button type="submit">Enviar</button>
-
-  </form>
+  <p>Gracias por visitarnos. ¡Esperamos verlo de nuevo!</p>
+  <button onclick="window.history.back()">Volver atrás</button>
 </main>
 </body>
 </html>
