@@ -1,7 +1,9 @@
-package com.example.Hotel_quiroga.controler;
+package com.example.Hotel.controler;
 
-import com.example.Hotel_quiroga.modelo.Registro;
-import com.example.Hotel_quiroga.interfaceService.ISregistro;
+
+
+import com.example.Hotel.interfaceService.IPersonaService;
+import com.example.Hotel.modelo.Persona;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,33 +22,33 @@ public class Controler {
 
 
     @Autowired
-    private ISregistro service;
+    private IPersonaService service;
 
 
     @GetMapping("/listar")
     public String listar(Model model){
-        List<Registro>registros= service.listar();
-        model.addAttribute("registro",registros);
+        List<Persona>personas= service.listar();
+        model.addAttribute("personas", personas);
         return "index";
     }
 
     @GetMapping("/new")
     public String agregar(Model model){
-        model.addAttribute("registro", new Registro());
-        return "prueba";
+        model.addAttribute("persona", new Persona());
+        return "Habitaciones con Jacuzzi";
     }
 
     @PostMapping("/save")
-    public String save(@Validated Registro p){
+    public String save(@Validated Persona p){
         service.save(p);
         return "redirect:/listar";
     }
 
-    @GetMapping("/editaryacusi/{id}")
+    @GetMapping("/editar/{id}")
     public String editar(@PathVariable int id, Model model){
-        Optional<Registro> registro = service.listarId(id);
-        model.addAttribute("registro", registro);
-        return "Habitaciones con Jacuzzi ";
+        Optional<Persona> persona = service.listarId(id);
+        model.addAttribute("persona", persona);
+        return "form";
     }
 
     @GetMapping("/eliminar/{id}")

@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -83,43 +83,33 @@ height: 50px;
 <main>
   <p>Disfrute de nuestra habitación con jacuzzi que cuenta con: cama king, TV65", mini bar, sala de star, baño de lujo y con una hermosa vista que puede apreciar desde su balcón. Por favor, complete el siguiente formulario para hacer su reserva:</p>
   <form th:action="@{/save}" th:object="${persona}" method="POST">
-  <div class="card-header">
-    <!--Nombre-->
-    <div class="form-group">
-      <label>Nombre del huesped:</label>
-      <input th:field="*{nombre}" type="text" class="form-control">
+    <div class="card">
+      <div class="card-header">
+        <h3>
+          AGREGAR/EDITAR PERSONAS
+        </h3>
+      </div>
+      <div class="card-body">
+        <div class="form-group">
+          <label>ID</label>
+          <input th:field="*{id}" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>NOMBRE</label>
+          <input th:field="*{name}" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>TELEFONO</label>
+          <input th:field="*{telefono}" type="text" class="form-control">
+        </div>
+      </div>
+      <div class="card-footer">
+        <input type="submit" value="Guardar" class="btn btn-success">
+        <a th:href="@{/listar/}" class="btn btn-warning">Atras</a>
+      </div>
     </div>
-    <!--Cedula-->
-    <div class="form-group">
-      <label>Correo electronico</label>
-      <input th:field="*{correo}" type="text" class="form-control">
-    </div>
-    <!--Edad-->
-    <div class="form-group">
-      <label>Telefono</label>
-      <input th:field="*{telefono}" type="text" class="form-control">
-    </div>
-    <!--Genero-->
-    <div class="form-group">
-      <label>numero de documento</label>
-      <input th:field="*{num_doc}" type="text" class="form-control">
-    </div>
-    <div class="d-grid gap-2">
-      <input type="submit" value="Guardar" class="btn btn-success">
-      <a th:href="@{/listar/}" class="btn btn-warning">Atras</a>
-    </div>
-  </div>
+
   </form>
-  </div>
-  <tr th:each="persona:${personas}">
-    <td th:text="${persona.id}"></td>
-    <td th:text="${persona.name}"></td>
-    <td th:text="${persona.apellido}"></td>
-    <td th:text="${persona.cedula}"></td>
-    <td th:text="${persona.edad}"></td>
-    <td th:text="${persona.genero}"></td>
-  </tr>
-  </div>
 </main>
 </body>
 </html>

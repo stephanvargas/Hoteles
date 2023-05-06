@@ -1,13 +1,13 @@
-package com.example.Hotel_quiroga;
+package com.example.Hotel;
 
 		import org.springframework.boot.SpringApplication;
 		import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HotelesApplication {
+public class ejecutador {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HotelesApplication.class, args);
+		SpringApplication.run(ejecutador.class, args);
 	}
 
 }
