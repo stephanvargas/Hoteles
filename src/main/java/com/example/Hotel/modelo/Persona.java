@@ -10,17 +10,12 @@ public class Persona {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private  String name;
-    private  String telefono;
+    private String name;
+    private int telefono;
+    private String num_doc;
+
 
     public Persona() {
-
-    }
-
-    public Persona(int id, String name, String telefono) {
-        this.id = id;
-        this.name = name;
-        this.telefono = telefono;
     }
 
     public int getId() {
@@ -39,11 +34,26 @@ public class Persona {
         this.name = name;
     }
 
-    public String getTelefono() {
+    public int getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(String telefono) {
+    public void setTelefono(int telefono) {
         this.telefono = telefono;
+    }
+
+    public String getNum_doc() {
+        return num_doc;
+    }
+
+    public void setNum_doc(String num_doc) {
+        this.num_doc = num_doc;
+    }
+
+    public Persona(int id, String name, int telefono, String num_doc) {
+        this.id = id;
+        this.name = name;
+        this.telefono = telefono;
+        this.num_doc = num_doc;
     }
 }
