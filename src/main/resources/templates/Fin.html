@@ -3,21 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="icon" href="imagenes/hotel.png">
+
   <title>Vuelva pronto</title>
   <style>
       body {
-        font-family: Arial, sans-serif;
-        background-color: #f5f5f5;
+        font-family: Papyrus, sans-serif;
+        color: black;
+        font-size: 22px;
+        background-image: url(imagenes/fin.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
       }
+
       header {
         background-color: #fff;
         padding: 20px;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        background-color: rgba(37, 32, 32, 0.8);
       }
       h1 {
         margin: 0;
         font-size: 36px;
-        color: #333;
+        color: #ffffff;
+
       }
       main {
         max-width: 800px;
@@ -26,31 +37,20 @@
         background-color: #fff;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
         text-align: center;
-      }
-      p {
-        line-height: 1.5;
-        margin-bottom: 20px;
-      }
-      button[type="submit"] {
-        display: inline-block;
-        background-color: #4CAF50;
-        color: #fff;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 16px;
-        border: none;
-        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.5);
       }
     </style>
 </head>
 <body>
-<header>
+<header><center>
   <h1>Vuelva pronto</h1>
+  </center>
 </header>
+
 <main>
   <p>Gracias por visitarnos. ¡Esperamos verlo de nuevo!</p>
-  <button onclick="window.history.back()">Volver atrás</button>
+  <a href="Contactos.html" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Contactos </a>
+
 </main>
 </body>
 </html>
