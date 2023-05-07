@@ -11,19 +11,30 @@
     <table class="table" border="=3">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>NOMBRE</th>
                     <th>TELEFONO</th>
-                    <th>ACCIONES</th>
+                    <th>NUMERO DE DOCUMENTO</th>
+                    <th>CORREO</th>
+                    <th>NUMERO DE HABITACIONES</th>
+                    <th>FECHA LLEGADA</th>
+                    <th>FECHA SALIDA</th>
+                    <th>ACCION</th>
 
                 </tr>
 
             </thead>
         <tbody>
             <tr th:each="persona:${personas}">
-                <td th:text="${persona.id}"></td>
+
                 <td th:text="${persona.name}"></td>
                 <td th:text="${persona.telefono}"></td>
+                <td th:text="${persona.num_doc}"></td>
+                <td th:text="${persona.correo}"></td>
+                <td th:text="${persona.num_abi}"></td>
+                <td th:text="${persona.llegada}"></td>
+                <td th:text="${persona.salida}"></td>
+
+
                 <td>
                     <a th:href="@{/editar/}+${persona.id}" class="btn btn-warning">Editar</a>
                     <a th:href="@{/eliminar/}+${persona.id}"  class="btn btn-danger">Eliminar</a>

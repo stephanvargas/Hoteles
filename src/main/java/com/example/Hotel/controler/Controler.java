@@ -24,22 +24,32 @@ public class Controler {
     @Autowired
     private IPersonaService service;
 
-
+    @GetMapping("/inicio")
+    public String agregar(Model model){
+        model.addAttribute("persona", new Persona());
+        return "boton";
+    }
     @GetMapping("/listar")
     public String listar(Model model){
         List<Persona>personas= service.listar();
         model.addAttribute("personas", personas);
         return "index";
     }
-    @GetMapping("/new1")
+
+    @GetMapping("/Jacuzzi")
     public String agregar1(Model model){
         model.addAttribute("persona", new Persona());
         return "Habitaciones con Jacuzzi";
     }
-    @GetMapping("/new2")
+    @GetMapping("/Estelar")
     public String agregar2(Model model){
         model.addAttribute("persona", new Persona());
         return "Habitación estelar";
+    }
+    @GetMapping("/precios")
+    public String agregar3(Model model){
+        model.addAttribute("persona", new Persona());
+        return "Precio de las habitaciones";
     }
     @PostMapping("/save")
     public String save(@Validated Persona p){
