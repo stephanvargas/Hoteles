@@ -4,11 +4,36 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Papyrus, sans-serif;
+
+            color: black;
+            font-size: 10px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            color: brown;
+        }
+        main {
+            margin: 0 auto;
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 5);
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
 </head>
 <body>
 <div class="container mt-4">
-    <a th:href="@{/new}" class="btn btn-primary">Nuevo</a>
-    <table class="table" border="=3">
+    <div class="row">
+        <center> <h1>TABLA DE REGISTROS</h1>
+        </center>
+        </div>
+    <main>
+        <table class="table table-ligth table-striped-columns">
             <thead>
                 <tr>
                     <th>NOMBRE</th>
@@ -19,9 +44,7 @@
                     <th>LLEGADA</th>
                     <th>SALIDA</th>
                     <th>ACCION</th>
-
                 </tr>
-
             </thead>
         <tbody>
             <tr th:each="persona:${personas}">
@@ -33,18 +56,14 @@
                 <td th:text="${persona.num_abi}"></td>
                 <td th:text="${persona.llegada}"></td>
                 <td th:text="${persona.salida}"></td>
-
-
                 <td>
                     <a th:href="@{/editar/}+${persona.id}" class="btn btn-warning">Editar</a>
                     <a th:href="@{/eliminar/}+${persona.id}"  class="btn btn-danger">Eliminar</a>
                 </td>
             </tr>
         </tbody>
-    </table>
+        </table>
+    </main>
 </div>
-<table>
-
-</table>
 </body>
 </html>
