@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:background-color="http://www.w3.org/1999/xhtml">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,41 +42,38 @@ background-color: rgba(255, 255, 255, 0.8);
           </center>
       </h3>
       </div>
-          <label>Nombre Del Huesped:</label>
-          <input th:field="*{name}" type="text" class="form-control">
-        </div>
-        <div class="form-group">
+      <label>Nombre Del Huesped:</label>
+      <input th:field="*{name}" type="text" class="form-control" placeholder="Nombre completo">
+      </div>
+      <div class="form-group">
           <label>Correo electrónico:</label>
-          <input th:field="*{correo}" type="text" class="form-control">
-        </div><div class="form-group">
-        <label>Numero de telefomo</label>
-        <input th:field="*{telefono}" type="text" class="form-control">
-      </div>
-        <div class="form-group">
+          <input th:field="*{correo}" type="email" class="form-control" id="exampleFormControlInput1" placeholder="ejemplo@ejemplo.com">
+      </div><div class="form-group">
+
+      <label>Numero de telefomo</label>
+      <input th:field="*{telefono}" type="text" class="form-control" placeholder="Numero De Telefono">
+  </div>
+      <div class="form-group">
           <label>Numero de documento</label>
-          <input th:field="*{num_doc}" type="text" class="form-control">
-        </div>
-      <div class="form-group">
-          <label>"habitacion"</label>
-          <input th:field="*{num_abi}" type="text" class="form-control">
-      </div>
+          <input th:field="*{num_doc}" type="text" class="form-control" placeholder="Numero De documento" >
       </div>
       <div class="form-group">
-          <label>"Fecha de llegada"</label>
-          <input th:field="*{llegada}" type="date" class="form-control" >
+          <label>habitacion"</label>
+          <input th:field="*{num_abi}" type="text" class="form-control" placeholder="Numero de habitaciones">
       </div>
       <div class="form-group">
-          <label>"Fecha de salida"</label>
-          <input th:field="*{salida}" type="date" class="form-control" >
+          <label>Fecha De llegada"</label>
+          <input th:field="*{llegada}" type="date" class="form-control">
+      </div>
+      <div class="form-group">
+          <label>Fecha De Salida"</label>
+          <input th:field="*{salida}" type="date" class="form-control " >
       </div>
       <div class="card-footer">
           <input type="submit" value="Siguiente" class="btn btn-success">
         <a th:href="@{/listar/}" class="btn btn-warning">Atras</a>
       </div>
     </div>
-
-
-
   </form><a href="Contactos.html" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Contactos </a>
 </main>
 </body>
