@@ -31,18 +31,12 @@ public class Controler {
         model.addAttribute("personas", personas);
         return "index";
     }
-    @GetMapping("/inicio")
-    public String agregar(Model model){
-        model.addAttribute("persona", new Persona());
-        return "Boton";
-    }
-
-    @GetMapping("/jacuzzi")
+    @GetMapping("/new1")
     public String agregar1(Model model){
         model.addAttribute("persona", new Persona());
         return "Habitaciones con Jacuzzi";
     }
-    @GetMapping("/estelar")
+    @GetMapping("/new2")
     public String agregar2(Model model){
         model.addAttribute("persona", new Persona());
         return "Habitación estelar";
@@ -50,13 +44,13 @@ public class Controler {
     @PostMapping("/save")
     public String save(@Validated Persona p){
         service.save(p);
-        return "redirect:/listar";
+        return "Evaluación";
     }
     @GetMapping("/editar/{id}")
     public String editar(@PathVariable int id, Model model){
         Optional<Persona> persona = service.listarId(id);
         model.addAttribute("persona", persona);
-        return "form";
+        return "index";
     }
 
     @GetMapping("/eliminar/{id}")

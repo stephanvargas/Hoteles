@@ -15,8 +15,8 @@ public class Persona {
     private String num_doc;
     private  String correo;
     private int num_abi;
-    private int llegada;
-    private int Salida;
+    private String llegada;
+    private String Salida;
 
 
     public Persona() {
@@ -70,23 +70,23 @@ public class Persona {
         this.num_abi = num_abi;
     }
 
-    public int getLlegada() {
+    public String getLlegada() {
         return llegada;
     }
 
-    public void setLlegada(int llegada) {
+    public void setLlegada(String llegada) {
         this.llegada = llegada;
     }
 
-    public int getSalida() {
+    public String getSalida() {
         return Salida;
     }
 
-    public void setSalida(int salida) {
+    public void setSalida(String salida) {
         Salida = salida;
     }
 
-    public Persona(int id, String name, int telefono, String num_doc, String correo, int num_abi, int llegada, int salida) {
+    public Persona(int id, String name, int telefono, String num_doc, String correo, int num_abi, String llegada, String salida) {
         this.id = id;
         this.name = name;
         this.telefono = telefono;
