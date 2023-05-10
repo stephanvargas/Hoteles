@@ -36,7 +36,7 @@ background-color: rgba(255, 255, 255, 0.8);
 </header>
     <main>
         <p>Disfrute de nuestra habitación estelar y sus comodidades que son cama doble, wifi,TV65", mini bar, baño de lujo, y con una hermosa vista que puede ver desde su balcón. Por favor, complete el siguiente formulario para hacer su reserva:</p>
-        <form th:action="@{/save2}" th:object="${persona}" method="POST" >
+        <form th:action="@{/save}" th:object="${persona}" method="POST" >
             <h3><center>
                 Regristro:
           </center>
@@ -79,7 +79,7 @@ background-color: rgba(255, 255, 255, 0.8);
 
             <div class="card-footer">
                 <input type="submit" value="Siguiente" class="btn btn-success">
-                <a th:href="@{/listar/}" class="btn btn-warning">Atras</a>
+                <a th:href="@{/inicio}" class="btn btn-warning">Atras</a>
             </div>
 
             </div>

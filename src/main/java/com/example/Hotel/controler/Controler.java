@@ -48,7 +48,6 @@ public class Controler {
     }
     @GetMapping("/precios")
     public String agregar3(Model model){
-        model.addAttribute("persona", new Persona());
         return "Precio de las habitaciones";
     }
     @PostMapping("/save")
