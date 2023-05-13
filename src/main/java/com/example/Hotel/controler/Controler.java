@@ -41,6 +41,11 @@ public class Controler {
         model.addAttribute("persona", new Persona());
         return "Habitaciones con Jacuzzi";
     }
+    @GetMapping("/contactos")
+    public String agregar4(Model model){
+        model.addAttribute("persona", new Persona());
+        return "contactos";
+    }
     @GetMapping("/Estelar")
     public String agregar2(Model model){
         model.addAttribute("persona", new Persona());

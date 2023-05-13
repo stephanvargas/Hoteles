@@ -43,6 +43,7 @@
                     <th>HABITACIONES</th>
                     <th>LLEGADA</th>
                     <th>SALIDA</th>
+                    <th>TP.HABITACION</th>
                     <th>ACCION</th>
                 </tr>
             </thead>
@@ -56,6 +57,7 @@
                 <td th:text="${persona.num_abi}"></td>
                 <td th:text="${persona.llegada}"></td>
                 <td th:text="${persona.salida}"></td>
+                <td th:text="${persona.tipohabitacion}"></td>
                 <td>
                     <a th:href="@{/editar/}+${persona.id}" class="btn btn-warning">Editar</a>
                     <a th:href="@{/eliminar/}+${persona.id}"  class="btn btn-danger">Eliminar</a>

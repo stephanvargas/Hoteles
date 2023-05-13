@@ -14,12 +14,21 @@ public class Persona {
     private int telefono;
     private String num_doc;
     private  String correo;
-    private int num_abi;
+    private String num_abi;
     private String llegada;
     private String Salida;
+    private  String tipohabitacion;
 
 
     public Persona() {
+    }
+
+    public String getTipohabitacion() {
+        return tipohabitacion;
+    }
+
+    public void setTipohabitacion(String tipohabitacion) {
+        this.tipohabitacion = tipohabitacion;
     }
 
     public int getId() {
@@ -62,11 +71,11 @@ public class Persona {
         this.correo = correo;
     }
 
-    public int getNum_abi() {
+    public String getNum_abi() {
         return num_abi;
     }
 
-    public void setNum_abi(int num_abi) {
+    public void setNum_abi(String num_abi) {
         this.num_abi = num_abi;
     }
 
@@ -86,7 +95,7 @@ public class Persona {
         Salida = salida;
     }
 
-    public Persona(int id, String name, int telefono, String num_doc, String correo, int num_abi, String llegada, String salida) {
+    public Persona(int id, String name, int telefono, String num_doc, String correo, String num_abi, String llegada, String salida, String tipohabitacion) {
         this.id = id;
         this.name = name;
         this.telefono = telefono;
@@ -95,5 +104,6 @@ public class Persona {
         this.num_abi = num_abi;
         this.llegada = llegada;
         Salida = salida;
+        this.tipohabitacion = tipohabitacion;
     }
 }
