@@ -29,11 +29,11 @@ public class Controler {
         model.addAttribute("persona", new Persona());
         return "boton";
     }
-    @GetMapping("/listar")
+    @GetMapping("/tabla")
     public String listar(Model model){
         List<Persona>personas= service.listar();
         model.addAttribute("personas", personas);
-        return "index";
+        return "Tabla De Registros";
     }
 
     @GetMapping("/Jacuzzi")
@@ -42,29 +42,32 @@ public class Controler {
         return "Habitaciones con Jacuzzi";
     }
     @GetMapping("/contactos")
-    public String agregar4(Model model){
+    public String agregar2(Model model){
         model.addAttribute("persona", new Persona());
         return "contactos";
     }
+
+
     @GetMapping("/Estelar")
-    public String agregar2(Model model){
+    public String agregar3(Model model){
         model.addAttribute("persona", new Persona());
         return "Habitación estelar";
     }
-    @GetMapping("/precios")
-    public String agregar3(Model model){
-        return "Precio de las habitaciones";
+    @GetMapping("/evaluacion")
+    public String agregar4(Model model){
+        model.addAttribute("persona", new Persona());
+        return "Evaluación";
     }
     @PostMapping("/save")
     public String save(@Validated Persona p){
         service.save(p);
-        return "Evaluación";
+        return "redirect:/evaluación";
     }
     @GetMapping("/editar/{id}")
     public String editar(@PathVariable int id, Model model){
         Optional<Persona> persona = service.listarId(id);
         model.addAttribute("persona", persona);
-        return "index";
+        return "Tabla De Registros";
     }
 
     @GetMapping("/eliminar/{id}")

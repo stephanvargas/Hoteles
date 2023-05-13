@@ -18,6 +18,8 @@ public class Persona {
     private String llegada;
     private String Salida;
     private  String tipohabitacion;
+    private String calificacion;
+    private String comentarios;
 
 
     public Persona() {
@@ -95,7 +97,23 @@ public class Persona {
         Salida = salida;
     }
 
-    public Persona(int id, String name, int telefono, String num_doc, String correo, String num_abi, String llegada, String salida, String tipohabitacion) {
+    public String getCalificacion() {
+        return calificacion;
+    }
+
+    public void setCalificacion(String calificacion) {
+        this.calificacion = calificacion;
+    }
+
+    public String getComentarios() {
+        return comentarios;
+    }
+
+    public void setComentarios(String comentarios) {
+        this.comentarios = comentarios;
+    }
+
+    public Persona(int id, String name, int telefono, String num_doc, String correo, String num_abi, String llegada, String salida, String tipohabitacion, String calificacion, String comentarios) {
         this.id = id;
         this.name = name;
         this.telefono = telefono;
@@ -105,5 +123,7 @@ public class Persona {
         this.llegada = llegada;
         Salida = salida;
         this.tipohabitacion = tipohabitacion;
+        this.calificacion = calificacion;
+        this.comentarios = comentarios;
     }
 }
