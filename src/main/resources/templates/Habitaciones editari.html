@@ -42,12 +42,14 @@
       <p>Disfrute de nuestra habitación con jacuzzi que cuenta con: cama king, TV65", mini bar, sala de star, baño de lujo y con una hermosa vista que puede apreciar desde su balcón. Por favor, complete el siguiente formulario para hacer su reserva:</p>
       <form th:action="@{/save}" th:object="${persona}" method="POST">
         <h3>
-          Regristro:
+          Editar:
         </h3>
         </div>
+
         <div class="form-group">
           <select th:field="*{tipohabitacion}" >
             <option value="habitación con jacuzy">habitación con jacuzy</option>
+            <option value="habitación Stelar">habitación Stelar</option>
             <option th:each="opcion : ${opciones}" th:value="${opcion}" th:text="${opcion}"></option>
           </select>
         </div>
@@ -73,13 +75,18 @@
 
         <div class="form-group">
           <label >habitación:</label>
-          <select th:field="*{num_abi}" class="form-select" ide="num_abi"required >
+          <select th:field="*{num_abi}" class="form-select" ide="num_abi" >
             <option value="" disabled selected hidden>-- Número de habitación --</option>
-            <option value="101">habitación 101</option>
-            <option value="102">habitación 102</option>
-            <option value="103">habitación 103</option>
-            <option value="104">habitación 104</option>
-            <option value="105">habitación 105</option>
+            <option value="101">habitación 101 jacuzy</option>
+            <option value="102">habitación 102 jacuzy</option>
+            <option value="103">habitación 103 jacuzy</option>
+            <option value="104">habitación 104 jacuzy</option>
+            <option value="105">habitación 105 jacuzy</option>
+            <option value="106">habitación 106 Stelar </option>
+            <option value="107">habitación 107 Stelar</option>
+            <option value="108">habitación 108 Stelar</option>
+            <option value="109">habitación 109 Stelar</option>
+            <option value="110">habitación 110 Stelar</option>
             <option th:each="opcion : ${opciones}" th:value="${opcion}" th:text="${opcion}"></option>
           </select>
         </div>
@@ -97,7 +104,7 @@
 
         <div class="card-footer">
           <input type="submit" value="Siguiente" class="btn btn-success" required>
-          <a th:href="@{/inicio}" class="btn btn-warning">Atras</a>
+          <a th:href="@{/listar}" class="btn btn-warning">Atras</a>
         </div>
 
       </form><a href="/contactos" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Contactos </a>

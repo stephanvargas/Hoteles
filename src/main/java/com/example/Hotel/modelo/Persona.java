@@ -11,13 +11,14 @@ public class Persona {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private int telefono;
-    private String num_doc;
+    private long telefono;
+    private long num_doc;
     private  String correo;
     private String num_abi;
     private String llegada;
     private String Salida;
     private  String tipohabitacion;
+
 
 
 
@@ -48,19 +49,19 @@ public class Persona {
         this.name = name;
     }
 
-    public int getTelefono() {
+    public long getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(long telefono) {
         this.telefono = telefono;
     }
 
-    public String getNum_doc() {
+    public long getNum_doc() {
         return num_doc;
     }
 
-    public void setNum_doc(String num_doc) {
+    public void setNum_doc(long num_doc) {
         this.num_doc = num_doc;
     }
 
@@ -97,7 +98,7 @@ public class Persona {
     }
 
 
-    public Persona(int id, String name, int telefono, String num_doc, String correo, String num_abi, String llegada, String salida, String tipohabitacion) {
+    public Persona(int id, String name, long telefono, long num_doc, String correo, String num_abi, String llegada, String salida, String tipohabitacion) {
         this.id = id;
         this.name = name;
         this.telefono = telefono;

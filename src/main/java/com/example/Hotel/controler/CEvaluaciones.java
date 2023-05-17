@@ -28,10 +28,10 @@ public class CEvaluaciones {
     public String listar1(Model model){
         List<Evaluciones>evaluciones= service.listar1();
         model.addAttribute("evaluacion",  evaluciones);
-        return "index";
+        return "tabla de comentarios";
     }
 
-    @GetMapping("/Calificacion")
+    @GetMapping("/Calificar")
     public String agregar10(Model modelo){
         modelo.addAttribute("evaluacion", new Evaluciones());
         return "Evaluación";
@@ -43,14 +43,14 @@ public class CEvaluaciones {
         return "Boton";
     }
 
-    @GetMapping("/editar/{ide1}")
+    @GetMapping("/editar1/{ide}")
     public String editar1(@PathVariable int ide, Model modelo){
         Optional<Evaluciones> evaluciones = service.listarId1(ide);
         modelo.addAttribute("evaluacion", evaluciones);
-        return "form";
+        return "/";
     }
 
-    @GetMapping("/eliminar/{ide1}")
+    @GetMapping("/eliminar1/{ide}")
     public String delete1(@PathVariable int ide){
         service.delete1(ide);
         return "redirect:/listar1";

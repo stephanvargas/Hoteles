@@ -46,7 +46,7 @@
       <p>Por favor, califique la experiencia en el hotel:</p>
         <form th:action="@{/save1}" th:object="${evaluacion}" method="POST">
           <div class="form-group">
-            <select th:field="*{ calificacion}" >
+            <select th:field="*{ calificacion}" class="form-select" ide="num_abi"required >
               <option value="★★★★★">★★★★★</option>
               <option value="★★★★">★★★★</option>
               <option value="★★★">★★★</option>

@@ -12,11 +12,6 @@
         background-color: #f5f5f5;
         background-image: url(/imagenes/Hotel.jpg);
       }
-      header {
-        background-color: #fff;
-        padding: 20px;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-      }
       h1 {
         margin: 0;
         font-size: 36px;
@@ -26,32 +21,70 @@
         max-width: 800px;
         margin: 0 auto;
         padding: 20px;
-        background-color: #fff;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
         text-align: center;
+        background-color: rgba(255, 255, 255, 0.8);
       }
     </style>
 </head>
 <body>
-<header>
-  <h1>Precios de habitaciones</h1>
-</header>
-    <main>
-      <table>
-        <tr>
-          <th>Habitación</th>
-          <th>Precio (por una  noche)</th>
-        </tr>
-        <tr>
-          <td>Habitación estelar</td>
-          <td>$600.000</td>
-        </tr>
-        <tr>
-          <td>Habitación con jacuzzi</td>
-          <td>$800.000</td>
-        </tr>
-      </table>
-      <li>Opción de mensajes en nuestra página de contacto</li>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid ms-auto">
+      <a class="navbar-brand" href="#">
+        <!--Logo-->
+        <img src="/imagenes/logo2.jpg" alt="Logo" width="32" height="32" class="d-inline-block align-text-top" >
+        Precios de habitaciones
+      </a>
+    </div>
+  </nav>
+  <main>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-15md-6">
+
+          <div class="card-body">
+            <p class="card-text">  </p>
+            <h5 class="card-title">Habitación estelar</h5>
+            <p class="card-text">Camas cómodas: 8.3, según 137
+              Esta habitación estelar cuenta con TV de pantalla plana y aire acondicionado.</p>
+            <p class="card-text">Precio:600.000 Pesos Colombianos
+            </p>
+          </div>
+
+          <div class="card-body">
+            <p class="card-text">  </p>
+            <h5 class="card-title">Habitación con jacuzzi</h5>
+            <p class="card-text">Camas cómodas: 8.3, según 137
+              Esta habitación Suite   cuenta con jacuzzi,
+              con TV de pantalla plana con canales por cable y aire acondicionado.
+              Dispone de baño privado con ducha, artículos de aseo gratuitos y toallas.
+              Incluye escritorio y zona de estar.</p>
+            <p class="card-text">Precio:900.000 Pesos Colombianos
+            </p>
+          </div>
+
+          <div class="card-body">
+            <p class="card-text">  </p>
+            <h5 class="card-title">Servicios principales</h5>
+            <p class="card-text">Servicio de limpieza diario
+              Desayuno disponible
+              Sala de fitness abierta las 24 horas
+              Estacionamiento
+              Bar
+              Terraza
+              Recepción disponible las 24 horas
+              Snack-bar o delicatessen
+              Servicio de tintorería/lavandería
+              Sala de reuniones
+              Personal multilingüe
+              Resguardo de equipaje</p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
       </ul>
       <a th:href="@{/inicio}" class="btn btn-warning">Atras</a>
     </main>
