@@ -37,6 +37,7 @@
         <table class="table table-ligth table-striped-columns">
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>NOMBRE</th>
                     <th>TELEFONO</th>
                     <th>DOCUMENTO</th>
@@ -51,6 +52,7 @@
         <tbody>
             <tr th:each="persona:${personas}">
 
+                <td th:text="${persona.id}"></td>
                 <td th:text="${persona.name}"></td>
                 <td th:text="${persona.telefono}"></td>
                 <td th:text="${persona.num_doc}"></td>

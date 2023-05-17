@@ -23,17 +23,15 @@ public class Controler {
 
     @Autowired
     private IPersonaService service;
-
-    @GetMapping("/inicio")
-    public String agregar(Model model){
-        model.addAttribute("persona", new Persona());
-        return "boton";
-    }
-    @GetMapping("/tabla")
+    @GetMapping("/listar")
     public String listar(Model model){
         List<Persona>personas= service.listar();
         model.addAttribute("personas", personas);
         return "Tabla De Registros";
+    }
+    @GetMapping("/inicio")
+    public String agregar(Model model){
+        return "boton";
     }
 
     @GetMapping("/Jacuzzi")
@@ -41,33 +39,30 @@ public class Controler {
         model.addAttribute("persona", new Persona());
         return "Habitaciones con Jacuzzi";
     }
-    @GetMapping("/contactos")
-    public String agregar2(Model model){
-        model.addAttribute("persona", new Persona());
-        return "contactos";
-    }
-
-
     @GetMapping("/Estelar")
-    public String agregar3(Model model){
+    public String agregar2(Model model){
         model.addAttribute("persona", new Persona());
         return "Habitación estelar";
     }
-    @GetMapping("/evaluacion")
-    public String agregar4(Model model){
-        model.addAttribute("persona", new Persona());
-        return "Evaluación";
+    @GetMapping("/contactos")
+    public String agregar3(Model model){
+        return "contactos";
     }
+    @GetMapping("/agradecimiento")
+    public String agregar4(Model model){
+        return "Fin";
+    }
+
     @PostMapping("/save")
     public String save(@Validated Persona p){
         service.save(p);
-        return "redirect:/evaluación";
+        return "redirect:/agradecimiento";
     }
     @GetMapping("/editar/{id}")
     public String editar(@PathVariable int id, Model model){
         Optional<Persona> persona = service.listarId(id);
         model.addAttribute("persona", persona);
-        return "Tabla De Registros";
+        return "";
     }
 
     @GetMapping("/eliminar/{id}")
@@ -75,7 +70,4 @@ public class Controler {
         service.delete(id);
         return "redirect:/listar";
     }
-
-
-
 }
