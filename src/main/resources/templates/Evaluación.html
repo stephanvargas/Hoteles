@@ -41,30 +41,29 @@
     </center>
   </heade>
 
-
     <main>
       <p>Por favor, califique la experiencia en el hotel:</p>
-        <form th:action="@{/save1}" th:object="${evaluacion}" method="POST">
+        <form th:action="@{/save/comentarios}" th:object="${evaluation}" method="POST">
           <div class="form-group">
-            <select th:field="*{ calificacion}" class="form-select" ide="num_abi"required >
-              <option value="★★★★★">★★★★★</option>
-              <option value="★★★★">★★★★</option>
-              <option value="★★★">★★★</option>
-              <option value="★★">★★</option>
-              <option value="★">★</option>
+            <select th:field="*{calificacion}" class="form-select" ide="num_abi" required >
+              <option value="5">★★★★★</option>
+              <option value="4">★★★★</option>
+              <option value="3">★★★</option>
+              <option value="2">★★</option>
+              <option value="1">★</option>
               <option th:each="opcion : ${opciones}" th:value="${opcion}" th:text="${opcion}"></option>
             </select>
           </div>
 
           <label>comentario:</label>
-          <input th:field="*{comentarios}" type="text" class="form-control" placeholder="ingresa un comentario">
+          <input th:field="*{comentarios}" type="text" class="form-control"  required>
           </div>
 
           <div class="card-footer">
             <input type="submit" value="Siguiente" class="btn btn-success">
             <a href="/contactos" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Contactos </a>
           </div>
-      </form>
+        </form>
     </main>
   </body>
 </html>

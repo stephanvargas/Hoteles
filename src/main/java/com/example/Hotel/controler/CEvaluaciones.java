@@ -1,7 +1,5 @@
 package com.example.Hotel.controler;
 
-
-
 import com.example.Hotel.interfaceService.IEvaluacionService;
 import com.example.Hotel.modelo.Evaluciones;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,38 +19,38 @@ import java.util.Optional;
 public class CEvaluaciones {
 
     @Autowired
-    private IEvaluacionService service;
+    private IEvaluacionService servi;
 
 
     @GetMapping("/listar1")
     public String listar1(Model model){
-        List<Evaluciones>evaluciones= service.listar1();
+        List<Evaluciones>evaluciones= servi.listar1();
         model.addAttribute("evaluacion",  evaluciones);
-        return "tabla de comentarios";
+        return "Tabla De Comentarios";
     }
 
     @GetMapping("/Calificar")
-    public String agregar10(Model modelo){
-        modelo.addAttribute("evaluacion", new Evaluciones());
+    public String agregar7(Model model){
+        model.addAttribute("evaluation", new Evaluciones());
         return "Evaluación";
     }
 
-    @PostMapping("/save1")
+    @PostMapping("/save/comentarios")
     public String save1(@Validated Evaluciones a){
-        service.save1(a);
-        return "Boton";
+        servi.save1(a);
+        return "redirect:/inicio";
     }
 
     @GetMapping("/editar1/{ide}")
-    public String editar1(@PathVariable int ide, Model modelo){
-        Optional<Evaluciones> evaluciones = service.listarId1(ide);
-        modelo.addAttribute("evaluacion", evaluciones);
-        return "/";
+    public String editar1(@PathVariable int ide, Model model){
+        Optional<Evaluciones> evaluciones = servi.listarId1(ide);
+        model.addAttribute("evaluacion", evaluciones);
+        return "redirect:/Calificar";
     }
 
     @GetMapping("/eliminar1/{ide}")
     public String delete1(@PathVariable int ide){
-        service.delete1(ide);
+        servi.delete1(ide);
         return "redirect:/listar1";
     }
 

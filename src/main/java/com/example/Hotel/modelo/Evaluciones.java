@@ -8,10 +8,10 @@ public class Evaluciones {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ide;
-    private String calificacion;
+    private int calificacion;
     private String comentarios;
 
-    public Evaluciones(int ide, String calificacion, String comentarios) {
+    public Evaluciones(int ide, int calificacion, String comentarios) {
         this.ide = ide;
         this.calificacion = calificacion;
         this.comentarios = comentarios;
@@ -25,11 +25,11 @@ public class Evaluciones {
         this.ide = ide;
     }
 
-    public String getCalificacion() {
+    public int getCalificacion() {
         return calificacion;
     }
 
-    public void setCalificacion(String calificacion) {
+    public void setCalificacion(int calificacion) {
         this.calificacion = calificacion;
     }
 

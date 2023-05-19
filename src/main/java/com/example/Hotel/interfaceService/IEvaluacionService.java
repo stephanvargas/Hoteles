@@ -10,8 +10,8 @@ import java.util.Optional;
 public interface IEvaluacionService {
 
     public List<Evaluciones> listar1();
-    public Optional<Evaluciones> listarId1(int id);
-    public int save1(Evaluciones p);
-    public void delete1(int id);
+    public Optional<Evaluciones> listarId1(int ide);
+    public int save1(Evaluciones a);
+    public void delete1(int ide);
 
 }

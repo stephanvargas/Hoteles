@@ -20,15 +20,15 @@ public class EvaluacionService implements IEvaluacionService {
     }
 
     @Override
-    public Optional<Evaluciones> listarId1(int id) {
+    public Optional<Evaluciones> listarId1(int ide) {
 
-        return data.findById(id);
+        return data.findById(ide);
     }
 
     @Override
-    public int save1(Evaluciones p) {
+    public int save1(Evaluciones a) {
         int res = 0;
-        Evaluciones evaluciones = data.save(p);
+        Evaluciones evaluciones = data.save(a);
         if(!evaluciones.equals(null)){
             res = 1;
         }
@@ -36,7 +36,7 @@ public class EvaluacionService implements IEvaluacionService {
     }
 
     @Override
-    public void delete1(int id) {
-        data.deleteById(id);
+    public void delete1(int ide) {
+        data.deleteById(ide);
     }
 }

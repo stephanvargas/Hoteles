@@ -50,6 +50,7 @@ public class Controler {
     }
     @GetMapping("/agradecimiento")
     public String agregar4(Model model){
+        model.addAttribute("persona", new Persona());
         return "Fin";
     }
     @GetMapping("/precios")
@@ -57,7 +58,7 @@ public class Controler {
         return "Precio de las habitaciones";
     }
     @GetMapping("/editar")
-    public String agregar7(Model model){
+    public String agregar6(Model model){
         model.addAttribute("persona", new Persona());
         return "Habitaciones editari";
     }

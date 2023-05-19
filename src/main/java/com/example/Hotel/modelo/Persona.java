@@ -97,7 +97,6 @@ public class Persona {
         Salida = salida;
     }
 
-
     public Persona(int id, String name, long telefono, long num_doc, String correo, String num_abi, String llegada, String salida, String tipohabitacion) {
         this.id = id;
         this.name = name;
@@ -108,6 +107,5 @@ public class Persona {
         this.llegada = llegada;
         Salida = salida;
         this.tipohabitacion = tipohabitacion;
-
     }
 }
