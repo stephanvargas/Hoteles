@@ -71,7 +71,7 @@ public class Controler {
     public String editar(@PathVariable int id, Model model){
         Optional<Persona> persona = service.listarId(id);
         model.addAttribute("persona", persona);
-        return "redirect:/editar";
+        return "Habitaciones editari";
     }
 
     @GetMapping("/eliminar/{id}")

@@ -41,12 +41,6 @@ public class CEvaluaciones {
         return "redirect:/inicio";
     }
 
-    @GetMapping("/editar1/{ide}")
-    public String editar1(@PathVariable int ide, Model model){
-        Optional<Evaluciones> evaluciones = servi.listarId1(ide);
-        model.addAttribute("evaluacion", evaluciones);
-        return "redirect:/Calificar";
-    }
 
     @GetMapping("/eliminar1/{ide}")
     public String delete1(@PathVariable int ide){
