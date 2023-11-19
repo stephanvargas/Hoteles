@@ -1,4 +1,4 @@
-package com.example.Hotel.modelo;
+package com.example.Canchas.modelo;
 
 import javax.persistence.*;
 

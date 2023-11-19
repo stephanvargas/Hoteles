@@ -1,9 +1,9 @@
-package com.example.Hotel.controler;
+package com.example.Canchas.controler;
 
 
 
-import com.example.Hotel.interfaceService.IPersonaService;
-import com.example.Hotel.modelo.Persona;
+import com.example.Canchas.interfaceService.IPersonaService;
+import com.example.Canchas.modelo.Persona;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,15 +34,15 @@ public class Controler {
         return "boton";
     }
 
-    @GetMapping("/Jacuzzi")
+    @GetMapping("/Sintetica")
     public String agregar1(Model model){
         model.addAttribute("persona", new Persona());
-        return "Habitaciones con Jacuzzi";
+        return "sintetica";
     }
-    @GetMapping("/Estelar")
+    @GetMapping("/Voleibol")
     public String agregar2(Model model){
         model.addAttribute("persona", new Persona());
-        return "Habitación estelar";
+        return "voleibol";
     }
     @GetMapping("/contactos")
     public String agregar3(Model model){
@@ -60,7 +60,7 @@ public class Controler {
     @GetMapping("/editar")
     public String agregar6(Model model){
         model.addAttribute("persona", new Persona());
-        return "Habitaciones editari";
+        return "editari";
     }
     @PostMapping("/save")
     public String save(@Validated Persona p){
@@ -71,7 +71,7 @@ public class Controler {
     public String editar(@PathVariable int id, Model model){
         Optional<Persona> persona = service.listarId(id);
         model.addAttribute("persona", persona);
-        return "Habitaciones editari";
+        return "editari";
     }
 
     @GetMapping("/eliminar/{id}")

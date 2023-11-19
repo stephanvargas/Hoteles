@@ -1,8 +1,8 @@
-package com.example.Hotel.service;
+package com.example.Canchas.service;
 
-import com.example.Hotel.interfaceService.IPersonaService;
-import com.example.Hotel.interfaces.IPersona;
-import com.example.Hotel.modelo.Persona;
+import com.example.Canchas.interfaceService.IPersonaService;
+import com.example.Canchas.interfaces.IPersona;
+import com.example.Canchas.modelo.Persona;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <link rel="icon" href="/imagenes/logo.png">
+  <link rel="icon" href="/imagenes/logo.jpeg">
   <title>Habitación estelar</title>
   <style>
 body {
 font-family: Papyrus, sans-serif;
-background-image: url(/imagenes/habitacion.jpg);
+background-image: url(/imagenes/voleibol.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -30,12 +30,21 @@ background-color: rgba(255, 255, 255, 0.8);
 </style>
 </head>
 <body>
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid ms-auto">
+        <a class="navbar-brand" href="#">
+            <!--Logo-->
+            <img src="/imagenes/logo.jpeg" alt="Logo" width="32" height="32" class="d-inline-block align-text-top" >
+            Precios de Canchas
+        </a>
+    </div>
+</nav>
 <header>
-  <center> <h1>Habitación estelar</h1>
+  <center> <h1>Cancha Voleibol</h1>
   </center>
 </header>
     <main>
-        <p>Disfrute de nuestra habitación estelar y sus comodidades que son cama doble, wifi,TV65", mini bar, baño de lujo, y con una hermosa vista que puede ver desde su balcón. Por favor, complete el siguiente formulario para hacer su reserva:</p>
+        <p>Disfrute de nuestras excelentes instalaciones deportivas :</p>
         <form th:action="@{/save}" th:object="${persona}" method="POST" >
             <h3><center>
                 Regristro:
@@ -45,12 +54,12 @@ background-color: rgba(255, 255, 255, 0.8);
 
             <div class="form-group">
                 <select th:field="*{tipohabitacion}" >
-                    <option value="habitación Stelar">habitación Stelar</option>
+                    <option value="Cancha Voleibol">Cancha Voleibol</option>
                     <option th:each="opcion : ${opciones}" th:value="${opcion}" th:text="${opcion}"></option>
                 </select>
             </div>
 
-            <label>Nombre Del Huesped:</label>
+            <label>Nombre Completo</label>
             <input th:field="*{name}" type="text" class="form-control" placeholder="Nombre completo" required>
             </div>
 
@@ -70,26 +79,21 @@ background-color: rgba(255, 255, 255, 0.8);
             </div>
 
             <div class="form-group">
-                    <label >habitación:</label>
-                    <select th:field="*{num_abi}" class="form-select" ide="num_abi" required >
-                        <option value="" disabled selected hidden>-- Número de habitación --</option>
-                        <option value="101">habitación 106</option>
-                        <option value="102">habitación 107</option>
-                        <option value="102">habitación 108</option>
-                        <option value="102">habitación 109</option>
-                        <option value="102">habitación 110</option>
+                    <label >Cancha</label>
+                    <select th:field="*{num_cancha}" class="form-select" ide="num_cancha" required >
+                        <option value="" disabled selected hidden>-- Número de cancha--</option>
+                        <option value="101">106</option>
+                        <option value="102">107</option>
+                        <option value="102">108</option>
+                        <option value="102">109</option>
+                        <option value="102">110</option>
                         <option th:each="opcion : ${opciones}" th:value="${opcion}" th:text="${opcion}"></option>
                     </select>
               </div>
 
             <div class="form-group">
-                <label>Fecha De llegada"</label>
-                <input th:field="*{llegada}" type="date" class="form-control" required>
-            </div>
-
-            <div class="form-group">
-                <label>Fecha De Salida"</label>
-                <input th:field="*{salida}" type="date" class="form-control " required>
+                <label>Fecha De De Reserva"</label>
+                <input th:field="*{reserva}" type="datetime-local" class="form-control" required>
             </div>
 
             <div class="card-footer">

@@ -1,4 +1,4 @@
-package com.example.Hotel.modelo;
+package com.example.Canchas.modelo;
 
 
 import javax.persistence.*;
@@ -14,9 +14,9 @@ public class Persona {
     private long telefono;
     private long num_doc;
     private  String correo;
-    private String num_abi;
-    private String llegada;
-    private String Salida;
+    private String num_cancha;
+    private String reserva;
+
     private  String tipohabitacion;
 
 
@@ -73,39 +73,30 @@ public class Persona {
         this.correo = correo;
     }
 
-    public String getNum_abi() {
-        return num_abi;
+    public String getNum_cancha() {
+        return num_cancha;
     }
 
-    public void setNum_abi(String num_abi) {
-        this.num_abi = num_abi;
+    public void setNum_cancha(String num_cancha) {
+        this.num_cancha = num_cancha;
     }
 
-    public String getLlegada() {
-        return llegada;
+    public String getReserva() {
+        return reserva;
     }
 
-    public void setLlegada(String llegada) {
-        this.llegada = llegada;
+    public void setReserva(String reserva) {
+        this.reserva = reserva;
     }
 
-    public String getSalida() {
-        return Salida;
-    }
-
-    public void setSalida(String salida) {
-        Salida = salida;
-    }
-
-    public Persona(int id, String name, long telefono, long num_doc, String correo, String num_abi, String llegada, String salida, String tipohabitacion) {
+    public Persona(int id, String name, long telefono, long num_doc, String correo, String num_cancha, String reserva, String tipohabitacion) {
         this.id = id;
         this.name = name;
         this.telefono = telefono;
         this.num_doc = num_doc;
         this.correo = correo;
-        this.num_abi = num_abi;
-        this.llegada = llegada;
-        Salida = salida;
+        this.num_cancha = num_cancha;
+        this.reserva = reserva;
         this.tipohabitacion = tipohabitacion;
     }
 }

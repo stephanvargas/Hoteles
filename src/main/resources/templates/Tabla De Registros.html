@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>TABLA DE REGISTRO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="icon" href="/imagenes/logo.png">
+    <link rel="icon" href="/imagenes/logo.jpeg">
     <style>
         body {
             font-family: Papyrus, sans-serif;
@@ -28,6 +28,15 @@
     </style>
 </head>
 <body>
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid ms-auto">
+        <a class="navbar-brand" href="#">
+            <!--Logo-->
+            <img src="/imagenes/logo.jpeg" alt="Logo" width="32" height="32" class="d-inline-block align-text-top" >
+            Precios de Canchas
+        </a>
+    </div>
+</nav>
 <div class="container mt-4">
     <div class="row">
         <center> <h1>TABLA DE REGISTROS</h1>
@@ -42,10 +51,9 @@
                     <th>TELEFONO</th>
                     <th>DOCUMENTO</th>
                     <th>CORREO</th>
-                    <th>HABITACIONES</th>
+                    <th>CANCHA</th>
                     <th>LLEGADA</th>
-                    <th>SALIDA</th>
-                    <th>TP.HABITACION</th>
+                    <th>TP.CANCHA</th>
                     <th>ACCION</th>
                 </tr>
             </thead>
@@ -57,9 +65,8 @@
                 <td th:text="${persona.telefono}"></td>
                 <td th:text="${persona.num_doc}"></td>
                 <td th:text="${persona.correo}"></td>
-                <td th:text="${persona.num_abi}"></td>
-                <td th:text="${persona.llegada}"></td>
-                <td th:text="${persona.salida}"></td>
+                <td th:text="${persona.num_cancha}"></td>
+                <td th:text="${persona.reserva}"></td>
                 <td th:text="${persona.tipohabitacion}"></td>
                 <td>
                     <a th:href="@{/editar/}+${persona.id}" class="btn btn-warning">Editar</a>

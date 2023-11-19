@@ -1,7 +1,8 @@
-package com.example.Hotel.controler;
+package com.example.Canchas.controler;
 
-import com.example.Hotel.interfaceService.IEvaluacionService;
-import com.example.Hotel.modelo.Evaluciones;
+import com.example.Canchas.interfaceService.IEvaluacionService;
+import com.example.Canchas.modelo.Evaluciones;
+import com.example.Canchas.modelo.productos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,7 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
-import java.util.Optional;
 
 @Controller
 @RequestMapping
@@ -22,14 +22,14 @@ public class CEvaluaciones {
     private IEvaluacionService servi;
 
 
-    @GetMapping("/listar1")
+    @GetMapping("/listar2")
     public String listar1(Model model){
         List<Evaluciones>evaluciones= servi.listar1();
         model.addAttribute("evaluacion",  evaluciones);
         return "Tabla De Comentarios";
     }
 
-    @GetMapping("/Calificar")
+    @GetMapping("/evaliacion")
     public String agregar7(Model model){
         model.addAttribute("evaluation", new Evaluciones());
         return "Evaluación";
@@ -47,7 +47,4 @@ public class CEvaluaciones {
         servi.delete1(ide);
         return "redirect:/listar1";
     }
-
-
-
 }

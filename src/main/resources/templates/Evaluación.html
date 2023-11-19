@@ -37,6 +37,15 @@
 </style>
 </head>
   <body>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid ms-auto">
+      <a class="navbar-brand" href="#">
+        <!--Logo-->
+        <img src="/imagenes/logo.jpeg" alt="Logo" width="32" height="32" class="d-inline-block align-text-top" >
+        Precios de Canchas
+      </a>
+    </div>
+  </nav>
   <heade>
     <center> <h1>Evaluación del hotel</h1>
     </center>
@@ -46,7 +55,7 @@
       <p>Por favor, califique la experiencia en el hotel:</p>
         <form th:action="@{/save/comentarios}" th:object="${evaluation}" method="POST">
           <div class="form-group">
-            <select th:field="*{calificacion}" class="form-select" ide="num_abi" required >
+            <select th:field="*{calificacion}" class="form-select" ide="num_cancha" required >
               <option value="5">★★★★★</option>
               <option value="4">★★★★</option>
               <option value="3">★★★</option>

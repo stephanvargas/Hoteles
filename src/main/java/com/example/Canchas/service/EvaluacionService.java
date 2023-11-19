@@ -1,8 +1,8 @@
-package com.example.Hotel.service;
+package com.example.Canchas.service;
 
-import com.example.Hotel.interfaceService.IEvaluacionService;
-import com.example.Hotel.interfaces.IEvaluaciones;
-import com.example.Hotel.modelo.Evaluciones;
+import com.example.Canchas.interfaceService.IEvaluacionService;
+import com.example.Canchas.interfaces.IEvaluaciones;
+import com.example.Canchas.modelo.Evaluciones;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

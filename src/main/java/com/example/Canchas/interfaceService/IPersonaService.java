@@ -1,12 +1,12 @@
-package com.example.Hotel.interfaceService;
+package com.example.Canchas.interfaceService;
 
-import com.example.Hotel.modelo.Persona;
+import com.example.Canchas.modelo.Persona;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.List;
 import java.util.Optional;
 
-@SpringBootApplication(scanBasePackages = {"com.example.Hotel"})
+@SpringBootApplication(scanBasePackages = {"com.example.Canchas"})
 public interface IPersonaService {
 
     public List<Persona>listar();

@@ -1,6 +1,6 @@
-package com.example.Hotel.interfaces;
+package com.example.Canchas.interfaces;
 
-import com.example.Hotel.modelo.Persona;
+import com.example.Canchas.modelo.Persona;
 import org.springframework.data.repository.CrudRepository;
 
 public interface IPersona  extends CrudRepository<Persona, Integer> {
